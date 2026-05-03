@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 30% 96%;
+    --foreground: 220 40% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 13%;
+    --primary: 215 60% 24%;
+    --primary-foreground: 220 20% 95%;
+    --secondary: 210 30% 88%;
+    --secondary-foreground: 215 60% 24%;
+    --muted: 210 20% 92%;
+    --muted-foreground: 215 15% 47%;
+    --accent: 200 45% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 215 60% 24%;
+    --radius: 0.625rem;
+
+    --success: 152 60% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 200 80% 50%;
+    --info-foreground: 0 0% 100%;
+
+    --sidebar-background: 220 40% 13%;
+    --sidebar-foreground: 220 20% 85%;
+    --sidebar-primary: 200 45% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 35% 18%;
+    --sidebar-accent-foreground: 220 20% 90%;
+    --sidebar-border: 220 30% 20%;
+    --sidebar-ring: 200 45% 45%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(215 60% 24%), hsl(200 45% 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(200 45% 45%), hsl(180 50% 50%));
+    --gradient-dark: linear-gradient(135deg, hsl(220 40% 13%), hsl(215 60% 24%));
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+    --shadow-elevated: 0 10px 30px -10px rgb(15 27 61 / 0.15);
+  }
+
+  .dark {
+    --background: 220 40% 8%;
+    --foreground: 220 20% 90%;
+    --card: 220 35% 12%;
+    --card-foreground: 220 20% 90%;
+    --popover: 220 35% 12%;
+    --popover-foreground: 220 20% 90%;
+    --primary: 200 45% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 220 20% 85%;
+    --muted: 220 25% 16%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 200 45% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 200 45% 45%;
+    --sidebar-background: 220 45% 6%;
+    --sidebar-foreground: 220 20% 80%;
+    --sidebar-primary: 200 45% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 35% 12%;
+    --sidebar-accent-foreground: 220 20% 85%;
+    --sidebar-border: 220 30% 14%;
+    --sidebar-ring: 200 45% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  .gradient-dark {
+    background: var(--gradient-dark);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  .glass {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+  }
+}
+
+/* Leaflet map styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+}

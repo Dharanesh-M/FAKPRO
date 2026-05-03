@@ -1,0 +1,44 @@
+
+# dependencies
+/node_modules/
+
+# debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# coverage directories
+coverage/
+.nyc_output/
+
+# build output
+dist/
+build/
+.next/
+.nuxt/
+.svelte-kit/
+.storybook/
+.storybook-static/
+.out/
+.cache/
+
+# env files
+.env
+.env.*
+
+# misc
+.DS_Store
+*.tgz
+.eslintcache
+.node_repl_history
+.pnpm-debug.log*
+.idea/
+.vscode/
+
